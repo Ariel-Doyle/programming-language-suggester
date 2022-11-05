@@ -2,7 +2,7 @@
 
 #### By _**Ariel Doyle**_
 
-#### _This is a simple HTML webpage as practice for writing code, working with HTML, CSS, and JavaScript._
+#### _This is a simple HTML webpage as practice for writing code, working with HTML, CSS, Web APIs, and JavaScript._
 
 ## Technologies Used
 
@@ -10,6 +10,7 @@
 - _VS Code Editor_
 - _CSS_
 - _JavaScript_
+- _Web APIs_
 
 ## Description
 
