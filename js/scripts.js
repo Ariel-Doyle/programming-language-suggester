@@ -1,8 +1,15 @@
 //UI Logic
 
 window.addEventListener("load", function() {
+  function getAndSetQuestionValues() {
+    const question1Input = document.getElementById()
+  }
+  
+  const form = document.querySelector("form");
+
+  
+  
   function handleRadio(e) {
-    e.preventDefault();
     const radioSelection = document.querySelector("input[name='decide']:checked").value;
   }
 
@@ -10,8 +17,6 @@ window.addEventListener("load", function() {
     document.getElementById("radio-form").addEventListener("submit", handleRadio);*/
 
 });
-
-
 
 /*function getInitialWhisperValue() {
   const personInput = document.getElementById("personInput").value;
