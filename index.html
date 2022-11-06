@@ -9,24 +9,25 @@
 <body>
   <div class="container" id="hero-section">
     <h1>Programming Language Selector</h1>
-    <p>Welcome to the quiz to help you find your perfect programming language! Please answer the questions below and hit the submit button to see your results!</p>
+    <p>Welcome to the quiz to help you find your perfect programming language! Please answer the questions and hit the submit button to see your results!</p>
+    <button type="button" id="start-btn">Start The Quiz!</button>
     <form>
-      <div class="form-div">
+      <div class="hidden" id="form-div">
         <h1>Question 1:</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
           <br>
-          <label for="q1Agree" >
-          <input type="radio" id="q1Agree" name="decide1" value="1">
+          <label for="q1-agree" >
+          <input type="radio" id="q1-agree" name="decide1" value="1">
           Agree
           </label>
           <br>
-          <label for="q1Disagree" >
-          <input type="radio" id="q1Disagree"  name="decide1" value=".5">
+          <label for="q1-disagree" >
+          <input type="radio" id="q1-disagree"  name="decide1" value=".5">
           Disagree
           </label>
           <br>
-          <label for="q1Neutral" >
-          <input type="radio" id="q1Neutral" name="decide1" value="0" checked>
+          <label for="q1-neutral" >
+          <input type="radio" id="q1-neutral" name="decide1" value="0" checked>
           Neutral
           </label>
           <br>
@@ -35,18 +36,18 @@
         <h1>Question 2:</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
           <br>
-          <label for="q2Agree" >
-          <input type="radio" id="q2Agree" name="decide2" value="1">
+          <label for="q2-agree" >
+          <input type="radio" id="q2-agree" name="decide2" value="1">
           Agree
           </label>
           <br>
-          <label for="q2Disagree">
-          <input type="radio" id="q2Disagree" name="decide2" value=".5">
+          <label for="q2-disagree">
+          <input type="radio" id="q2-disagree" name="decide2" value=".5">
           Disagree
           </label>
           <br>
-          <label for="q2Neutral">
-          <input type="radio" id="q2Neutral" name="decide2" value="0" checked>
+          <label for="q2-neutral">
+          <input type="radio" id="q2-neutral" name="decide2" value="0" checked>
           Neutral
          </label>
          <br>
@@ -55,18 +56,18 @@
         <h1>Question 3:</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
           <br>
-          <label for="q3Agree">
-          <input type="radio" id="q3Agree" name="decide3" value="1">
+          <label for="q3-agree">
+          <input type="radio" id="q3-agree" name="decide3" value="1">
           Agree
           </label>
           <br>
-          <label for="q3Disagree">
-          <input type="radio" id="q3Disagree" name="decide3" value=".5">
+          <label for="q3-disagree">
+          <input type="radio" id="q3-disagree" name="decide3" value=".5">
           Disagree
           </label>
           <br>
-          <label for="q3Neutral">
-          <input type="radio" id="q3Neutral" name="decide3" value="0" checked>
+          <label for="q3-neutral">
+          <input type="radio" id="q3-neutral" name="decide3" value="0" checked>
           Neutral
           </label>
           <br>
@@ -75,18 +76,18 @@
         <h1>Question 4:</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
           <br>
-          <label for="q4Agree">
-          <input type="radio" id="q4Agree" name="decide4" value="1">
+          <label for="q4-agree">
+          <input type="radio" id="q4-agree" name="decide4" value="1">
           Agree
           </label>
           <br>
-          <label for=""q4Disagree>
-          <input type="radio" id="q4Disagree" name="decide4" value=".5">
+          <label for=""q4-disagree>
+          <input type="radio" id="q4-disagree" name="decide4" value=".5">
           Disagree
          </label>
          <br>
-         <label for="q4Neutral">
-        <input type="radio" id="q4Neutral" name="decide4" value="0" checked>
+         <label for="q4-neutral">
+        <input type="radio" id="q4-neutral" name="decide4" value="0" checked>
           Neutral
          </label>
          <br>
@@ -95,31 +96,33 @@
         <h1>Question 5:</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
           <br>
-          <label for="q5Agree">
-          <input type="radio" id="q5Agree" name="decide5" value="1">
+          <label for="q5-agree">
+          <input type="radio" id="q5-agree" name="decide5" value="1">
           Agree
           </label>
           <br>
-          <label for="q5Disagree">
-          <input type="radio" id="q5Disagree" name="decide5" value=".5">
+          <label for="q5-disagree">
+          <input type="radio" id="q5-disagree" name="decide5" value=".5">
           Disagree
           </label>
           <br>
-          <label for="q5Neutral">
-          <input type="radio" id="q5Neutral" name="decide5" value="0" checked>
+          <label for="q5-neutral">
+          <input type="radio" id="q5-neutral" name="decide5" value="0" checked>
           Neutral
           </label>
           <br>
         </p>
       </div>
-      <div>
+      <div class="results-btn hidden">
         <button type="submit" id="btn">Show Me My Results!</button>
       </div> 
     </form>  
 
-    <h1 class="hidden">The Programming Language You Should Start With:</h1>
-    <p id="output"></p>
-    <p>Always remmeber that you'll end up learning multiple languages along the way and the language you choose now doesn't have to be the only deciding factor on your path towards achieving your goals!</p>
+    <div class="hidden" id="result-intro">
+      <h1>The Programming Language You Should Start With:</h1>
+      <p id="output"></p>
+      <p>Always remmeber that you'll end up learning multiple languages along the way and the language you choose now doesn't have to be the only deciding factor on your path towards achieving your goals!</p>
+    </div>
   </div>
 </body>
 </html>

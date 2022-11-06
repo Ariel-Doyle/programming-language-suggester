@@ -19,14 +19,26 @@ window.addEventListener("load", function() {
       result = "Ruby";
     } else {
       result = "Python";
-    }   
-
-    document.getElementById("output").innerText = result;
+    }  
   }
 
+
+
+  /*function handleStartButton() {
+    const startButton = document.querySelector("button#start-btn");
+    let formDiv = document.getElementById("form-div");    
+  }*/
   let form = document.querySelector("form");
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      getAndSetRadioButtonValues();
-    });
+  const startButton = document.querySelector("button#start-btn");
+  let formDiv = document.getElementById("form-div");
+
+  form.addEventListener("click", function() {
+    formDiv.removeAttribute("class");
+  });
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    getAndSetRadioButtonValues();      
+    document.getElementById("output").innerText = result;
+  });
 });
