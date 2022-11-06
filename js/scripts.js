@@ -11,9 +11,11 @@ window.addEventListener("load", function() {
     const radioSum = radioSelection1 + radioSelection2 + radioSelection3 + radioSelection4 + radioSelection5;    
     
     let result;
-    if (radioSum > 2.5) {
+    if (radioSum > 3) {
       result = "C#";
-    } else if (radioSum > 0 ) {
+    } else if (radioSum > 2) {
+      result = "JavaScript";
+    } else if (radioSum > 1 ) {
       result = "Ruby";
     } else {
       result = "Python";
@@ -22,9 +24,9 @@ window.addEventListener("load", function() {
     document.getElementById("output").innerText = result;
   }
 
-let form = document.querySelector("form");
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    getAndSetRadioButtonValues();
-  });
+  let form = document.querySelector("form");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      getAndSetRadioButtonValues();
+    });
 });
