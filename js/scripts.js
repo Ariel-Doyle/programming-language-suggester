@@ -45,11 +45,11 @@ window.addEventListener("load", function() {
   tryAgainBtn.addEventListener("click", function() {
     heroDiv.classList.remove("hidden");
     resultDiv.classList.add("hidden");
-    document.querySelector("input[name='decide1']:checked").checked = "0" ;
-    document.getElementById("q2-neutral").value = 0;
-    document.getElementById("q3-neutral").value = 0;
-    document.getElementById("q4-neutral").value = null;
-    document.getElementById("q5-neutral").value = null;
+    document.getElementById("q1-neutral").checked = true;
+    document.getElementById("q2-neutral").checked = true;
+    document.getElementById("q3-neutral").checked = true;
+    document.getElementById("q4-neutral").checked = true;
+    document.getElementById("q5-neutral").checked = true;
   })
 
 });
