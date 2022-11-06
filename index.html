@@ -11,11 +11,11 @@
     <div id="hero-section" class="intro jumbotron">
       <h1>Programming Language Suggester</h1>
       <p>Welcome to the quiz to help you find your perfect programming language! Please answer the questions and hit the submit button to see your results!</p>
-      <button type="button" id="start-btn">Start The Quiz!</button>
+      <button type="button" id="start-btn" class="pressBtn">Start The Quiz!</button>
       <form class="hidden" id="form-div">
         <div>
           <h3>Question 1:</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
+          <p>Does solving puzzles and learning new games cause anxiety for you?
             <br>
             <label for="q1-agree" >
             <input type="radio" id="q1-agree" name="decide1" value="1">
@@ -35,7 +35,7 @@
           </p>
 
           <h3>Question 2:</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
+          <p>If you're feeling frustrated or stuck, do you tend to reach out to peers and resources for help?
             <br>
             <label for="q2-agree" >
             <input type="radio" id="q2-agree" name="decide2" value="1">
@@ -55,7 +55,7 @@
           </p>
 
           <h3>Question 3:</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
+          <p>Does it sound tedious to be a part of a variety of projects that change languages and requirements often?
             <br>
             <label for="q3-agree">
             <input type="radio" id="q3-agree" name="decide3" value="1">
@@ -75,7 +75,7 @@
           </p>
 
           <h3>Question 4:</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
+          <p>Do you prefer to work on large-scale projects that take more time using fewer languages, but have grander applications?
             <br>
             <label for="q4-agree">
             <input type="radio" id="q4-agree" name="decide4" value="1">
@@ -95,7 +95,7 @@
           </p>
 
           <h3>Question 5:</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, exercitationem aut. Laboriosam earum fugiat?
+          <p>Are you primarily motivated by how much earning potential a position has?
             <br>
             <label for="q5-agree">
             <input type="radio" id="q5-agree" name="decide5" value="1">
@@ -115,16 +115,16 @@
           </p>
         </div>
         <div class="results-btn">
-          <button type="submit" id="btn">Show Me My Results!</button>
+          <button type="submit" id="btn" class="pressBtn">Show Me My Results!</button>
         </div> 
       </form> 
     </div> 
 
-    <div class="hidden" id="result-intro">
+    <div class="hidden jumbotron" id="result-intro">
       <h1>The Programming Language You Should Start With:</h1>
       <p id="output"></p>
       <p>Always remeber that you'll end up learning multiple languages along the way and the language you choose now doesn't have to be the only deciding factor on your path towards achieving your goals!</p>
-      <button type="button" id="reset-btn">Try Again!</button>
+      <button type="button" id="reset-btn" class="pressBtn">Try Again!</button>
     </div>
   </div>
 </body>

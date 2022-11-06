@@ -34,3 +34,5 @@ _This is a simple HTML webpage as practice for writing code in line with lessons
 _[MIT](https://choosealicense.com/licenses/mit/)_
 
 Copyright (c) _2022_ _Ariel Doyle_
+
+_<a href="https://www.vecteezy.com/free-vector/coding-background">Coding Background Vectors by Vecteezy</a>_
