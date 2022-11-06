@@ -21,6 +21,7 @@ window.addEventListener("load", function() {
   }
 
   let form = document.querySelector("form");
+  let startBtn = document.getElementById("start-btn");
   let tryAgainBtn = document.getElementById("reset-btn");
   let heroDiv = document.getElementById("hero-section")
   let formDiv = document.getElementById("form-div");
@@ -28,6 +29,7 @@ window.addEventListener("load", function() {
 
   document.body.addEventListener("click", function() {
     formDiv.removeAttribute("class");
+    startBtn.classList.add("hidden");
   });
 
   form.addEventListener("submit", function(e) {
@@ -37,11 +39,6 @@ window.addEventListener("load", function() {
     document.getElementById("output").innerText = getAndSetRadioButtonValues();
   });
 
-  /*document.body.addEventListener("click", function() {
-    heroDiv.removeAttribute("class");
-    reset.removeAttribute("class");
-  });*/
-
   tryAgainBtn.addEventListener("click", function() {
     heroDiv.classList.remove("hidden");
     resultDiv.classList.add("hidden");
@@ -50,6 +47,6 @@ window.addEventListener("load", function() {
     document.getElementById("q3-neutral").checked = true;
     document.getElementById("q4-neutral").checked = true;
     document.getElementById("q5-neutral").checked = true;
-  })
+  });
 
 });
