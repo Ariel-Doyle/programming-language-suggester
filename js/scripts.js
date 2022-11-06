@@ -1,4 +1,3 @@
-//UI Logic
 window.addEventListener("load", function() {
 
   function getAndSetRadioButtonValues() {
@@ -10,35 +9,47 @@ window.addEventListener("load", function() {
 
     const radioSum = radioSelection1 + radioSelection2 + radioSelection3 + radioSelection4 + radioSelection5;    
     
-    let result;
     if (radioSum > 3) {
-      result = "C#";
+      return "C#";
     } else if (radioSum > 2) {
-      result = "JavaScript";
+      return "JavaScript";
     } else if (radioSum > 1 ) {
-      result = "Ruby";
+      return "Ruby";
     } else {
-      result = "Python";
+      return "Python";
     }  
   }
 
-
-
-  /*function handleStartButton() {
-    const startButton = document.querySelector("button#start-btn");
-    let formDiv = document.getElementById("form-div");    
-  }*/
   let form = document.querySelector("form");
-  const startButton = document.querySelector("button#start-btn");
+  let tryAgainBtn = document.getElementById("reset-btn");
+  let heroDiv = document.getElementById("hero-section")
   let formDiv = document.getElementById("form-div");
+  let resultDiv = document.getElementById("result-intro")
 
-  form.addEventListener("click", function() {
+  document.body.addEventListener("click", function() {
     formDiv.removeAttribute("class");
   });
 
   form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    getAndSetRadioButtonValues();      
-    document.getElementById("output").innerText = result;
+    e.preventDefault(); 
+    resultDiv.classList.remove("hidden"); 
+    heroDiv.classList.add("hidden");
+    document.getElementById("output").innerText = getAndSetRadioButtonValues();
   });
+
+  /*document.body.addEventListener("click", function() {
+    heroDiv.removeAttribute("class");
+    reset.removeAttribute("class");
+  });*/
+
+  tryAgainBtn.addEventListener("click", function() {
+    heroDiv.classList.remove("hidden");
+    resultDiv.classList.add("hidden");
+    document.querySelector("input[name='decide1']:checked").checked = "0" ;
+    document.getElementById("q2-neutral").value = 0;
+    document.getElementById("q3-neutral").value = 0;
+    document.getElementById("q4-neutral").value = null;
+    document.getElementById("q5-neutral").value = null;
+  })
+
 });
