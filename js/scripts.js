@@ -2,31 +2,29 @@
 window.addEventListener("load", function() {
 
   function getAndSetRadioButtonValues() {
-    const radioSelection1 = document.querySelector("input[name='decide1']:checked").value;
-    const radioSelection2 = document.querySelector("input[name='decide2']:checked").value;
-    const radioSelection3 = document.querySelector("input[name='decide3']:checked").value;
-    const radioSelection4 = document.querySelector("input[name='decide4']:checked").value;
-    const radioSelection5 = document.querySelector("input[name='decide5']:checked").value;
+    const radioSelection1 = parseFloat(document.querySelector("input[name='decide1']:checked").value);
+    const radioSelection2 = parseFloat(document.querySelector("input[name='decide2']:checked").value);
+    const radioSelection3 = parseFloat(document.querySelector("input[name='decide3']:checked").value);
+    const radioSelection4 = parseFloat(document.querySelector("input[name='decide4']:checked").value);
+    const radioSelection5 = parseFloat(document.querySelector("input[name='decide5']:checked").value);
+
+    const radioSum = radioSelection1 + radioSelection2 + radioSelection3 + radioSelection4 + radioSelection5;    
     
     let result;
-    if (radioSelection1 === "Agree") {
+    if (radioSum > 2.5) {
       result = "C#";
-    } else if (radioSelection1 === "Disagree") {
+    } else if (radioSum > 0 ) {
       result = "Ruby";
-    } else if (radioSelection1 === "Neutral") {
+    } else {
       result = "Python";
-    }
+    }   
 
     document.getElementById("output").innerText = result;
   }
 
-  function setFormSubmissionEventHandler() {
-    let form = document.querySelector("form");
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      getAndSetRadioButtonValues();
-    });
-  }
-
-  setFormSubmissionEventHandler();
+let form = document.querySelector("form");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    getAndSetRadioButtonValues();
+  });
 });
